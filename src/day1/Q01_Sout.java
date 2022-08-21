@@ -42,7 +42,7 @@ public class Q01_Sout {
         System.out.println("O");
         System.out.println("N");
         System.out.println("N");
-
+        System.out.println();
 
 
     }

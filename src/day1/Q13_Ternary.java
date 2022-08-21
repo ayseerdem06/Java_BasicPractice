@@ -31,6 +31,7 @@ public class Q13_Ternary {
 
         System.out.println("Sonuc : "+ sonuc);
 
+
          */
     }
 }
