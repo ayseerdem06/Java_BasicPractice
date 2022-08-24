@@ -46,7 +46,7 @@ public class Islemler {
 
     }
 
-    private static void islemMenusu() {
+    public static void islemMenusu() {
         System.out.println("Sectigin kisi turu " + kisiTuru + "Lutfen asagidaki islemleri seciniz");
 
         System.out.println("============= İŞLEMLER =============\n" +
@@ -109,12 +109,12 @@ public class Islemler {
 
     }
 
-    private static void cikis() {
+    public static void cikis() {
 
         System.out.println("İslemlerinizi gerçekleştirdiniz tesekkur ederiz");
     }
 
-    private static void silme() {
+    public static void silme() {
         System.out.println("****" + kisiTuru + "  Silme sayfasına hosgeldiniz");
         scan.nextLine();
         System.out.println("Kimlik no giriniz :");
@@ -151,9 +151,11 @@ public class Islemler {
 
     }
 
-    private static void listeleme() {
+    public static void listeleme() {
         System.out.println("****" + kisiTuru + "  Listeleme sayfasına hosgeldiniz");
+
         if (kisiTuru.equals("OGRENCI")) {
+
             System.out.println(ogrncList);
         } else {
             System.out.println(ogrtmnList);
@@ -161,7 +163,7 @@ public class Islemler {
 
     }
 
-    private static void arama() {
+    public static void arama() {
         System.out.println("****" + kisiTuru + "  Arama sayfasına hosgeldiniz");
         scan.nextLine();
         System.out.println("Kimlik no giriniz :");
@@ -199,7 +201,7 @@ public class Islemler {
         }
     }
 
-    private static void ekle() {  // bu method hem ogrencı hemde ogretmen eklemek icin tasarlandı
+    public static void ekle() {  // bu method hem ogrencı hemde ogretmen eklemek icin tasarlandı
         scan.nextLine();
         System.out.println("****" + kisiTuru + "  Ekleme sayfasına hosgeldiniz");
         String adSoyad;
