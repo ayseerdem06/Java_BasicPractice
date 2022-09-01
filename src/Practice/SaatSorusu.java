@@ -1,6 +1,6 @@
 package Practice;
 
-public class C01 {
+public class SaatSorusu {
   /*
     Kullanıcıdan 2 sayı girmesini isteyeceğiz, girilen bu değerlerden
     biri saati diğeri de dakikayı temsil edecek. Bize akrep ile yelkovan
