@@ -1,4 +1,4 @@
-package Practice;
+package Encapsulation;
 
 public class Book {
 

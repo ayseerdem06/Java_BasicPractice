@@ -1,4 +1,4 @@
-package Practice;
+package Encapsulation;
 
 public class E01 {
     public static void main(String[] args) {
