@@ -100,12 +100,14 @@ public class Lambda01 {//okul projesinde listele vb lamda expression ile yapiniz
 
     // Task : List elemanlarini alafabetik buyuk harf ve  tekrarsiz print ediniz.
     public static void alfabetikBuyukHarfTekrarsiz(List<String> yemek) {
+        yemek.stream().map(String::toUpperCase).distinct().sorted().collect(Collectors.toList()).forEach(Methodlarim::yazdir);
 
     }
 
 
     // Task : list elelmanlarinin character sayisini ters sirali olarak tekrarsiz print ediniz..
     public static void strKarakterSayisiYazdir(List<String> yemek) {
+        yemek.stream().map(String::length).sorted(Comparator.reverseOrder()).forEach(Methodlarim::yazdir);
 
     }
 
@@ -124,6 +126,7 @@ public class Lambda01 {//okul projesinde listele vb lamda expression ile yapiniz
     // Task : listin elemanlarin karakterlerinin cift sayili  karelerini hesaplayan,ve karelerini tekrarsiz
     // buyukten kucuge sirali  print ediniz..
     public static void karakterCiftKareBuyuktenKucuge(List<String> yemek) {
+        yemek.stream().filter(t->t.length()%2==0).map(t->t.length()*t.length()).distinct().sorted(Comparator.reverseOrder()).forEach(Methodlarim::yazdir);
 
     }
 
@@ -149,13 +152,15 @@ public class Lambda01 {//okul projesinde listele vb lamda expression ile yapiniz
     //noneMatch() --> hic bir sarti SAGLAMAZSA true en az bir eleman sarti SAGLARSA false return eder.
 
 
-    // Task : List elelmanlarinin "W" ile baslamasını kontrol ediniz.
+    // Task : List elelmanlarinin "W" ile baslamasını kontrol ediniz.(W ile başlayan olmadığından k ile denendi)
     public static void basHarfiWIleBaslayan(List<String> yemek) {
+        yemek.stream().filter(t->t.startsWith("k")).forEach(Methodlarim::yazdir);
 
     }
 
-    // TODO Task : List elelmanlarinin "x" ile biten en az bir elemaı kontrol ediniz.
+    // TODO Task : List elelmanlarinin "x" ile biten en az bir elemaı kontrol ediniz. (x ile biten eleman yok o nedenle e ile denendi)
     public static void xIleBitenEleman(List<String> yemek) {
+        yemek.stream().filter(t->t.endsWith("e")).limit(1).forEach(Methodlarim::yazdir);
 
     }
 
@@ -188,6 +193,8 @@ kullanılabilir.
 
     //TODO Task : list elemanlarini son harfine göre siralayıp ilk eleman hariç kalan elemanlari print ediniz.
     public static void sonHarfeGoreSiralaIlkHaricElmanlariYaz(List<String> yemek) {
+     yemek.stream().map(t->t.charAt(t.length()-1)).sorted().forEach(Methodlarim::yazdir);
+
     }
 }
 
